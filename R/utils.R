@@ -1,5 +1,7 @@
 #' Create query list
 #'
+#' `r lifecycle::badge('experimental')`
+#'
 #' @param ... Name value pairs.
 #'
 #' @return A named list.

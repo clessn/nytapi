@@ -14,6 +14,8 @@ create_popular_req <- function() {
 
 #' Get most viewed articles
 #'
+#' `r lifecycle::badge('experimental')`
+#'
 #' @param period Numeric. Period to get data. Either 1, 7 or 30. Defaults to 30.
 #' @param key String. NYT key.
 #' @param parse Logical. TRUE to return parsed JSON, FALSE to return HTTP
