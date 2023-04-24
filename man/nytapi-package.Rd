@@ -4,12 +4,12 @@
 \name{nytapi-package}
 \alias{nytapi}
 \alias{nytapi-package}
-\title{nytapi: What the Package Does (One Line, Title Case)}
+\title{nytapi: Get Data from the New York Times API}
 \description{
-What the package does (one paragraph).
+Get data from the New York Times API.
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Judith Bourque \email{info@clessn.ca}
 
 }
 \keyword{internal}
