@@ -4,7 +4,7 @@
 \alias{search_articles}
 \title{Look up articles by keywords}
 \usage{
-search_articles(query = NULL, filter = NULL, ..., key = NULL)
+search_articles(query = NULL, filter = NULL, ..., key = NULL, parse = TRUE)
 }
 \arguments{
 \item{query}{Search query}
@@ -14,9 +14,12 @@ search_articles(query = NULL, filter = NULL, ..., key = NULL)
 \item{...}{Other things to pass onto query}
 
 \item{key}{API key}
+
+\item{parse}{Logical. TRUE to return parsed JSON, FALSE to return HTTP
+response.}
 }
 \value{
-HTTR response
+HTTP response or parsed JSON.
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
