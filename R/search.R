@@ -26,4 +26,3 @@ search_articles <- function(query = NULL, filter = NULL, ..., key = NULL){
     httr2::req_perform()
 
 }
-# https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=yourkey
