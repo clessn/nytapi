@@ -2,16 +2,17 @@
 #'
 #' @param query Search query
 #' @param filter Search filters
+#' @param ... Other things to pass onto query
 #' @param key API key
 #'
 #' @return HTTR response
 #' @export
-search_articles <- function(query = NULL, filter = NULL, key = NULL){
+search_articles <- function(query = NULL, filter = NULL, ..., key = NULL){
 
   params <- list(
     q = query,
     fq = filter,
-   # ...,
+   ...,
     "api-key" = key
   )
 

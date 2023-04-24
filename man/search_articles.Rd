@@ -4,12 +4,14 @@
 \alias{search_articles}
 \title{Look up articles by keywords}
 \usage{
-search_articles(query = NULL, filter = NULL, key = NULL)
+search_articles(query = NULL, filter = NULL, ..., key = NULL)
 }
 \arguments{
 \item{query}{Search query}
 
 \item{filter}{Search filters}
+
+\item{...}{Other things to pass onto query}
 
 \item{key}{API key}
 }
