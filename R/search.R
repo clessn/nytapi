@@ -3,6 +3,10 @@
 
 #' Look up articles by keywords
 #'
+#' @param query Search query
+#' @param filter Search filters
+#' @param key API key
+#'
 #' @return HTTR response
 #' @export
 search_articles <- function(query = NULL, filter = NULL, key = NULL){

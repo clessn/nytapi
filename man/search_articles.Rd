@@ -6,6 +6,13 @@
 \usage{
 search_articles(query = NULL, filter = NULL, key = NULL)
 }
+\arguments{
+\item{query}{Search query}
+
+\item{filter}{Search filters}
+
+\item{key}{API key}
+}
 \value{
 HTTR response
 }
