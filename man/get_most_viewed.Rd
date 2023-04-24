@@ -18,5 +18,5 @@ response.}
 HTTP response or parsed JSON.
 }
 \description{
-Get most viewed articles
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 }
