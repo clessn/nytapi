@@ -4,15 +4,18 @@
 \alias{get_most_viewed}
 \title{Get most viewed articles}
 \usage{
-get_most_viewed(period = 30, key = NULL)
+get_most_viewed(period = 30, key = NULL, parse = TRUE)
 }
 \arguments{
 \item{period}{Numeric. Period to get data. Either 1, 7 or 30. Defaults to 30.}
 
 \item{key}{String. NYT key.}
+
+\item{parse}{Logical. TRUE to return parsed JSON, FALSE to return HTTP
+response.}
 }
 \value{
-HTTP response
+HTTP response or parsed JSON.
 }
 \description{
 Get most viewed articles
