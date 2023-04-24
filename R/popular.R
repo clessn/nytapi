@@ -20,10 +20,10 @@ create_popular_req <- function() {
 #' @return HTTP response
 #' @export
 get_most_viewed <- function(period = 30, key = NULL) {
-  path <- paste0("/viewed/", period, "json?api-key=", key)
+  path <- paste0("/viewed/", period, ".", "json?api-key=", key)
 
 
-  create_popular_req |>
+  create_popular_req() |>
     httr2::req_url_path_append(path)
 }
 
