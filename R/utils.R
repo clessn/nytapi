@@ -4,12 +4,18 @@
 
 #' Create query string
 #'
-#' @param ... vector of named elements
+#' @param ... Name value pairs.
 #'
 #' @return
 #' @export
 #'
 #' @examples
-create_query <- function(...) {
+create_query_list <- function(...) {
+  params <- list(
+    ...
+  )
 
+  names(params) <- paste0(names(params))
+
+  return(params)
 }
