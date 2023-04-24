@@ -26,13 +26,13 @@ devtools::install_github("clessn/nytapi")
 
 ``` r
 # .Renviron
-NYT_TOKEN = "tokenstring"
+NYT_KEY = "keystring"
 ```
 
 3.  Use key in functions
 
 ``` r
-search_articles(query = "Wikipedia", key = Sys.getenv("NYT_TOKEN"))
+search_articles(query = "Wikipedia", key = Sys.getenv("NYT_KEY"))
 ```
 
 ## Examples
@@ -42,7 +42,7 @@ search_articles(query = "Wikipedia", key = Sys.getenv("NYT_TOKEN"))
 ``` r
 library("nytapi")
 
-resp <- search_articles(query = "Wikipedia", key = Sys.getenv("NYT_TOKEN"))
+resp <- search_articles(query = "Wikipedia", key = Sys.getenv("NYT_KEY"))
 
 json <- resp |>
   httr2::resp_body_json()
