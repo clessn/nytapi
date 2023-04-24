@@ -1,6 +1,3 @@
-
-
-
 #' Look up articles by keywords
 #'
 #' @param query Search query
@@ -20,14 +17,12 @@ search_articles <- function(query = NULL, filter = NULL, key = NULL){
 
   names(params) <- paste0(names(params))
 
-
   create_req() |>
     httr2::req_url_path_append("/search/v2/articlesearch.json") |>
     httr2::req_url_query(!!!params) |>
     nytapi::add_user_agent() |>
     httr2::req_throttle(5/60) |>
     httr2::req_perform()
-
 
 }
 # https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=yourkey
