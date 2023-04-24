@@ -65,3 +65,9 @@ article[["abstract"]]
 article[["web_url"]]
 article[["snippet"]]
 ```
+
+## Notes
+
+For API documentation, terms of service and licensing information, see [developer.nytimes.com](https://developer.nytimes.com/).
+
+nytapi is not afiliated with The New York Times.
