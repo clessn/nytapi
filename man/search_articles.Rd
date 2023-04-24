@@ -19,5 +19,5 @@ search_articles(query = NULL, filter = NULL, ..., key = NULL)
 HTTR response
 }
 \description{
-Look up articles by keywords
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 }
