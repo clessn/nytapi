@@ -35,5 +35,3 @@ get_most_viewed <- function(period = 30, key = NULL, parse = TRUE) {
   return(resp)
   }
 }
-
-# https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=yourkey
