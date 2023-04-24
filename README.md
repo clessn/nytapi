@@ -34,3 +34,23 @@ NYT_TOKEN = "tokenstring"
 ``` r
 search_articles(query = "Wikipedia", key = Sys.getenv("NYT_TOKEN"))
 ```
+
+## Examples
+
+### Search articles
+
+``` r
+library("nytapi")
+
+resp <- search_articles(query = "Wikipedia", key = Sys.getenv("NYT_TOKEN"))
+
+json <- resp |>
+  httr2::resp_body_json()
+
+json[["response"]][["docs"]][[1]][["abstract"]]
+#> [1] "Women are being removed from the list of “American Novelists” and put into their own category. Moves like that make it harder and slower for women to gain equality in the literary world."
+json[["response"]][["docs"]][[1]][["web_url"]]
+#> [1] "https://www.nytimes.com/2013/04/28/opinion/sunday/wikipedias-sexism.html"
+json[["response"]][["docs"]][[1]][["snippet"]]
+#> [1] "Women are being removed from the list of “American Novelists” and put into their own category. Moves like that make it harder and slower for women to gain equality in the literary world."
+```

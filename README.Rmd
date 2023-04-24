@@ -44,3 +44,21 @@ NYT_TOKEN = "tokenstring"
 ```{r eval = FALSE}
 search_articles(query = "Wikipedia", key = Sys.getenv("NYT_TOKEN"))
 ```
+
+## Examples
+
+### Search articles
+
+
+```{r}
+library("nytapi")
+
+resp <- search_articles(query = "Wikipedia", key = Sys.getenv("NYT_TOKEN"))
+
+json <- resp |>
+  httr2::resp_body_json()
+
+json[["response"]][["docs"]][[1]][["abstract"]]
+json[["response"]][["docs"]][[1]][["web_url"]]
+json[["response"]][["docs"]][[1]][["snippet"]]
+```
