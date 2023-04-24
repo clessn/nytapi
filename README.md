@@ -4,6 +4,9 @@
 # nytapi
 
 <!-- badges: start -->
+
+[![Codecov test
+coverage](https://codecov.io/gh/clessn/wikirest/branch/main/graph/badge.svg)](https://app.codecov.io/gh/clessn/wikirest?branch=main)
 <!-- badges: end -->
 
 The goal of nytapi is to get data from the New York Times API.
