@@ -46,10 +46,7 @@ search_articles(query = "Wikipedia", key = Sys.getenv("NYT_KEY"))
 ``` r
 library("nytapi")
 
-resp <- search_articles(query = "Wikipedia", key = Sys.getenv("NYT_KEY"))
-
-json <- resp |>
-  httr2::resp_body_json()
+json <- search_articles(query = "Wikipedia", key = Sys.getenv("NYT_KEY"))
 
 # Preview of first article
 article <- json[["response"]][["docs"]][[1]]
