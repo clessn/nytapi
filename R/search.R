@@ -1,5 +1,7 @@
 #' Look up articles by keywords
 #'
+#' `r lifecycle::badge('experimental')`
+#'
 #' @param query Search query
 #' @param filter Search filters
 #' @param ... Other things to pass onto query
