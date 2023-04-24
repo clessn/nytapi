@@ -6,6 +6,11 @@
 \usage{
 get_most_viewed(period = 30, key = NULL)
 }
+\arguments{
+\item{period}{Numeric. Period to get data. Either 1, 7 or 30. Defaults to 30.}
+
+\item{key}{String. NYT key.}
+}
 \value{
 HTTP response
 }

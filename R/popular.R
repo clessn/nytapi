@@ -14,7 +14,8 @@ create_popular_req <- function() {
 
 #' Get most viewed articles
 #'
-#'
+#' @param period Numeric. Period to get data. Either 1, 7 or 30. Defaults to 30.
+#' @param key String. NYT key.
 #'
 #' @return HTTP response
 #' @export
