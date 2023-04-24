@@ -17,3 +17,20 @@ You can install the development version of nytapi from
 # install.packages("devtools")
 devtools::install_github("clessn/nytapi")
 ```
+
+## Usage
+
+1.  Get API key from
+    [developer.nytimes.com/](https://developer.nytimes.com/)
+2.  Save the access token to R environ using `usethis::edit_r_environ()`
+
+``` r
+# .Renviron
+NYT_TOKEN = "tokenstring"
+```
+
+3.  Use key in functions
+
+``` r
+search_articles(query = "Wikipedia", key = Sys.getenv("GITHUB_TOKEN"))
+```
