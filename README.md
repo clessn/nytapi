@@ -32,5 +32,5 @@ NYT_TOKEN = "tokenstring"
 3.  Use key in functions
 
 ``` r
-search_articles(query = "Wikipedia", key = Sys.getenv("GITHUB_TOKEN"))
+search_articles(query = "Wikipedia", key = Sys.getenv("NYT_TOKEN"))
 ```
