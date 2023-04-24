@@ -77,6 +77,22 @@ article[["byline"]]
 article[["published_date"]]
 ```
 
+### Get most e-mailed articles
+
+```{r}
+json <- get_most_emailed(key = Sys.getenv("NYT_KEY"))
+
+# Preview of first article
+article <- json[["results"]][[1]]
+
+article[["title"]]
+article[["byline"]]
+article[["published_date"]]
+```
+
+
+
+
 ## Notes
 
 For API documentation, terms of service and licensing information, see [developer.nytimes.com](https://developer.nytimes.com/).

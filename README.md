@@ -75,6 +75,22 @@ article[["published_date"]]
 #> [1] "2023-04-10"
 ```
 
+### Get most e-mailed articles
+
+``` r
+json <- get_most_emailed(key = Sys.getenv("NYT_KEY"))
+
+# Preview of first article
+article <- json[["results"]][[1]]
+
+article[["title"]]
+#> [1] "Whatever the Problem, It’s Probably Solved by Walking"
+article[["byline"]]
+#> [1] "By Andrew McCarthy"
+article[["published_date"]]
+#> [1] "2023-03-25"
+```
+
 ## Notes
 
 For API documentation, terms of service and licensing information, see
