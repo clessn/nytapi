@@ -23,8 +23,11 @@ get_most_viewed <- function(period = 30, key = NULL) {
   path <- paste0("/viewed/", period, ".", "json?api-key=", key)
 
 
-  create_popular_req() |>
-    httr2::req_url_path_append(path)
+  resp <- create_popular_req() |>
+    httr2::req_url_path_append(path) |>
+    httr2::req_perform()
+
+  return(resp)
 }
 
 # https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=yourkey
