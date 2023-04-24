@@ -2,13 +2,16 @@
 % Please edit documentation in R/utils.R
 \name{create_query_list}
 \alias{create_query_list}
-\title{Create query string}
+\title{Create query list}
 \usage{
 create_query_list(...)
 }
 \arguments{
 \item{...}{Name value pairs.}
 }
+\value{
+A named list.
+}
 \description{
-Create query string
+Create query list
 }
