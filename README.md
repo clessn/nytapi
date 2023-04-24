@@ -60,3 +60,10 @@ article[["web_url"]]
 article[["snippet"]]
 #> [1] "Women are being removed from the list of “American Novelists” and put into their own category. Moves like that make it harder and slower for women to gain equality in the literary world."
 ```
+
+## Notes
+
+For API documentation, terms of service and licensing information, see
+[developer.nytimes.com](https://developer.nytimes.com/).
+
+nytapi is not afiliated with The New York Times.
