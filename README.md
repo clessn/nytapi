@@ -17,3 +17,42 @@ You can install the development version of nytapi from
 # install.packages("devtools")
 devtools::install_github("clessn/nytapi")
 ```
+
+## Usage
+
+1.  Get API key from
+    [developer.nytimes.com/](https://developer.nytimes.com/)
+2.  Save the access token to R environ using `usethis::edit_r_environ()`
+
+``` r
+# .Renviron
+NYT_KEY = "keystring"
+```
+
+3.  Use key in functions
+
+``` r
+search_articles(query = "Wikipedia", key = Sys.getenv("NYT_KEY"))
+```
+
+## Examples
+
+### Search articles
+
+``` r
+library("nytapi")
+
+resp <- search_articles(query = "Wikipedia", key = Sys.getenv("NYT_KEY"))
+
+json <- resp |>
+  httr2::resp_body_json()
+
+article <- json[["response"]][["docs"]][[1]]
+
+article[["abstract"]]
+#> [1] "Women are being removed from the list of “American Novelists” and put into their own category. Moves like that make it harder and slower for women to gain equality in the literary world."
+article[["web_url"]]
+#> [1] "https://www.nytimes.com/2013/04/28/opinion/sunday/wikipedias-sexism.html"
+article[["snippet"]]
+#> [1] "Women are being removed from the list of “American Novelists” and put into their own category. Moves like that make it harder and slower for women to gain equality in the literary world."
+```
