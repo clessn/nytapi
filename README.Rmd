@@ -49,7 +49,6 @@ search_articles(query = "Wikipedia", key = Sys.getenv("NYT_TOKEN"))
 
 ### Search articles
 
-
 ```{r}
 library("nytapi")
 
