@@ -11,14 +11,10 @@
 #' @export
 search_articles <- function(query = NULL, filter = NULL, ..., key = NULL){
 
-  params <- list(
-    q = query,
-    fq = filter,
-    ...,
-    "api-key" = key
-  )
-
-  names(params) <- paste0(names(params))
+  params <- create_query_list(q = query,
+                    fq = filter,
+                    ...,
+                    "api-key" = key)
 
   create_req() |>
     httr2::req_url_path_append("/search/v2/articlesearch.json") |>

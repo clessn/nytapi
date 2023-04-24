@@ -6,8 +6,6 @@
 #'
 #' @return A named list.
 #' @export
-#'
-#' @examples
 create_query_list <- function(...) {
   params <- list(
     ...
