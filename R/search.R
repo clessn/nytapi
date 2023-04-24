@@ -17,9 +17,11 @@ search_articles <- function(query = NULL, filter = NULL, key = NULL){
   names(params) <- paste0(names(params))
 
 
-  test <- create_req() |>
+  create_req() |>
     httr2::req_url_path_append("/search/v2/articlesearch.json") |>
-    httr2::req_url_query(!!!params)
+    httr2::req_url_query(!!!params) |>
+    nytapi::add_user_agent()
+
 
 
 }
