@@ -4,7 +4,7 @@
 \alias{search_articles}
 \title{Look up articles by keywords}
 \usage{
-search_articles()
+search_articles(query = NULL, filter = NULL, key = NULL)
 }
 \value{
 HTTR response
