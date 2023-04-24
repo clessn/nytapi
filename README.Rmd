@@ -58,7 +58,9 @@ resp <- search_articles(query = "Wikipedia", key = Sys.getenv("NYT_TOKEN"))
 json <- resp |>
   httr2::resp_body_json()
 
-json[["response"]][["docs"]][[1]][["abstract"]]
-json[["response"]][["docs"]][[1]][["web_url"]]
-json[["response"]][["docs"]][[1]][["snippet"]]
+article <- json[["response"]][["docs"]][[1]]
+
+article[["abstract"]]
+article[["web_url"]]
+article[["snippet"]]
 ```
