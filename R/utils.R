@@ -1,12 +1,8 @@
-
-
-
-
-#' Create query string
+#' Create query list
 #'
 #' @param ... Name value pairs.
 #'
-#' @return
+#' @return A named list.
 #' @export
 #'
 #' @examples

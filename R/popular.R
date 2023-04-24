@@ -22,10 +22,13 @@ create_popular_req <- function() {
 #' @return HTTP response or parsed JSON.
 #' @export
 get_most_viewed <- function(period = 30, key = NULL, parse = TRUE) {
-  path <- paste0("/viewed/", period, ".", "json?api-key=", key)
+  path <- paste0("/viewed/", period, ".", "json")
+
+  params <- create_query_list("api-key" = key)
 
   resp <- create_popular_req() |>
     httr2::req_url_path_append(path) |>
+    httr2::req_url_query(!!!params) |>
     httr2::req_perform()
 
   if (parse) {
