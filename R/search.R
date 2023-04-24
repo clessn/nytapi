@@ -14,7 +14,7 @@ search_articles <- function(query = NULL, filter = NULL, ..., key = NULL){
   params <- list(
     q = query,
     fq = filter,
-   ...,
+    ...,
     "api-key" = key
   )
 
