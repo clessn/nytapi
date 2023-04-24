@@ -59,11 +59,25 @@ resp <- search_articles(query = "Wikipedia", key = Sys.getenv("NYT_KEY"))
 json <- resp |>
   httr2::resp_body_json()
 
+# Preview of first article
 article <- json[["response"]][["docs"]][[1]]
 
 article[["abstract"]]
 article[["web_url"]]
 article[["snippet"]]
+```
+
+### Get most viewed articles
+
+```{r}
+json <- get_most_viewed(key = Sys.getenv("NYT_KEY"))
+
+# Preview of first article
+article <- json[["results"]][[1]]
+
+article[["title"]]
+article[["byline"]]
+article[["published_date"]]
 ```
 
 ## Notes

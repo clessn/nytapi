@@ -51,6 +51,7 @@ resp <- search_articles(query = "Wikipedia", key = Sys.getenv("NYT_KEY"))
 json <- resp |>
   httr2::resp_body_json()
 
+# Preview of first article
 article <- json[["response"]][["docs"]][[1]]
 
 article[["abstract"]]
@@ -59,6 +60,22 @@ article[["web_url"]]
 #> [1] "https://www.nytimes.com/2013/04/28/opinion/sunday/wikipedias-sexism.html"
 article[["snippet"]]
 #> [1] "Women are being removed from the list of “American Novelists” and put into their own category. Moves like that make it harder and slower for women to gain equality in the literary world."
+```
+
+### Get most viewed articles
+
+``` r
+json <- get_most_viewed(key = Sys.getenv("NYT_KEY"))
+
+# Preview of first article
+article <- json[["results"]][[1]]
+
+article[["title"]]
+#> [1] "Gunman Kills 5 Co-Workers at Louisville Bank on Livestream, Police Say"
+article[["byline"]]
+#> [1] "By Kevin Williams, Amanda Holpuch and Campbell Robertson"
+article[["published_date"]]
+#> [1] "2023-04-10"
 ```
 
 ## Notes
